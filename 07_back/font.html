@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>글자 크기 지정하기</title>
+    <style>
+      /* 절대 크기 */
+      /* font-size: <절대 크기> | <상대 크기> | <크기> | <백분율> */
+      /* <절대크기> : px / <상대크기> : em, rem / 백분율 : % */
+      /* <크기> : xx-small, x-small, small, medium, large, x-large, xx-large */
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 20px;
+      }
+
+      /* 상대크기 : %, em, rem */
+      body {
+        font-size: 14px;
+      }
+      h1 {
+        font-size: 200%; /* 부모 요소의 font-size 기준 백분율 */
+      }
+      p {
+        font-size: 1em; /* 부모 요소의 font-size 기준 배율 */
+      }
+      span {
+        font-size: 1rem; /* 루트 요소(<html>)의 font-size 기준 배율 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 레드향이라 불린다.</p>
+    <p>
+      레드향은 한라봉과 귤을 교배한 것으로 <br />일반 귤보다 2~3배 크고,
+      <span>과육이 붉고 통통하다.</span>
+    </p>
+  </body>
+</html>
