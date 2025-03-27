@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What time is it?</title>
+    <style>
+      body {
+        font-size: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var now = new Date()
+      var display = now.toLocaleTimeString()
+      document.write('현재 시각은 ' + display) //writ라고 하면 이런 function은 없다 라고 뜸 f12에서
+    </script>
+  </body>
+</html>
