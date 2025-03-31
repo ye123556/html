@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+      }
+      p {
+        display: flex;
+        border: 1px solid black;
+        width: 120px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>현재 시간 보기</p>
+    <script>
+      function openCenter(doc, win, width, height) {
+        let left = (1920 - 400) / 2;
+        let top = (1040 - 200) / 2;
+        let opt = `left=${left}, top=${top}, width=${width}, height=${height}`;
+        window.open(doc, win, opt);
+      }
+      openCenter('quiz-1.html', 'pop', 400, 200);
+      // window.open('quiz-1.html', 'pop', 'width=400, height= 200');
+    </script>
+  </body>
+</html>
