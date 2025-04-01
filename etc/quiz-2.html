@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 2</title>
+    <style>
+      form {
+        margin-bottom: 30px;
+      }
+      input[type='number'] {
+        width: 30px;
+        height: 20px;
+        text-align: center;
+      }
+      button {
+        margin-left: 10px;
+      }
+      table {
+        width: 300px;
+      }
+      table,
+      td {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="number" id="row" value="1" />
+      <label for="row">행</label>
+      <input type="number" id="col" value="1" />
+      <label for="col">열</label>
+      <button type="button" onclick="createTable();">작성</button>
+    </form>
+    <div id="container"></div>
+    <script>
+      function createTable() {
+        let rowCount = document.querySelector('#row').value;
+        let colCount = document.querySelector('#col').value;
+
+        let newTable = document.createElement('table');
+        for (let i = 0; i < rowCount; i++) {
+          let newRow = document.createElement('tr');
+          for (let j = 0; j < colCount; j++) {
+            let newCell = document.createElement('td');
+            let textNode = document.createTextNode(i + ', ' + j);
+            newCell.appendChild(textNode);
+            newRow.appendChild(newCell);
+          }
+          newTable.appendChild(newRow);
+        }
+        let container = document.querySelector('#container');
+        container.innerHTML = '';
+        container.appendChild(newTable);
+      }
+    </script>
+  </body>
+</html>

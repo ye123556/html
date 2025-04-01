@@ -30,7 +30,10 @@
         let opt = `left=${left}, top=${top}, width=${width}, height=${height}`;
         window.open(doc, win, opt);
       }
-      openCenter('quiz-1.html', 'pop', 400, 200);
+      document.querySelector('p').onclick = () => {
+        openCenter('quiz-1.html', 'pop', 400, 200);
+      };
+      // openCenter('quiz-1.html', 'pop', 400, 200);
       // window.open('quiz-1.html', 'pop', 'width=400, height= 200');
     </script>
   </body>

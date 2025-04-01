@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 2</title>
+    <style>
+      form {
+        margin-bottom: 30px;
+      }
+      input[type='text'] {
+        width: 30px;
+        height: 20px;
+        text-align: center;
+      }
+      button {
+        margin-left: 10px;
+      }
+      table {
+        width: 300px;
+      }
+      table,
+      td {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="" id="row" value="1" />
+      <label for="row">행</label>
+      <input type="text" name="" id="col" value="1" />
+      <label for="col">열</label>
+      <button type="button" id="draw-table-btn">작성</button>
+    </form>
+    <div id="contents"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document
+          .querySelector('#draw-table-btn')
+          .addEventListener('click', drawTable);
+      });
+
+      function drawTable() {
+        let rowCount = parseInt(document.querySelector('#row').value);
+        let columnCount = parseInt(document.querySelector('#col').value);
+
+        let newTable = document.createElement('table');
+
+        for (let i = 0; i < rowCount; i++) {
+          // row = HTMLTableElement.insertRow('tr');
+          let row = document.createElement('tr');
+
+          for (let j = 0; j < columnCount; j++) {
+            let column = document.createElement('td');
+            let textNode = document.createTextNode(i + ', ' + j);
+            column.appendChild(textNode);
+            row.appendChild(column);
+          }
+          newTable.appendChild(row);
+        }
+        let contents = document.querySelector('#contents');
+        contents.innerHTML = '';
+
+        contents.appendChild(newTable);
+      }
+    </script>
+  </body>
+</html>
