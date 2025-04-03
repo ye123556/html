@@ -4,27 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test</title>
+    <style>
+      header > p {
+        display: inline-block;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="../js/data.js"></script>
   </head>
   <body>
     <header>
       <h1>발음 교정 테스트</h1>
-      <p><a href="01.html">1</a></p>
-      <p><a href="02.html">2</a></p>
-      <p><a href="03.html">3</a></p>
-      <p><a href="04.html">4</a></p>
-      <p><a href="05.html">5</a></p>
+      <!-- <p onclick="loadSection(this.textContent-1); return false;">
+        <a href="">1</a>
+      </p> 새로고침 방지-->
+      <p onclick="loadSection(this.textContent-1)"><a href="#">1</a></p>
+      <p onclick="loadSection(this.textContent-1)"><a href="#">2</a></p>
+      <p onclick="loadSection(this.textContent-1)"><a href="#">3</a></p>
+      <p onclick="loadSection(this.textContent-1)"><a href="#">4</a></p>
+      <p onclick="loadSection(this.textContent-1)"><a href="#">5</a></p>
     </header>
+    <section></section>
     <script>
-      let href = ['01.html', '02.html', '03.html', '04.html', '05.html'];
+      // let href = ['01.html', '02.html', '03.html', '04.html', '05.html'];
 
-      document.addEventListener('DOMContentLoaded', function () {
-        for (let i = 1; i <= href; i++) {
-          const button = document.querySelector('button[i]');
-          button.addEventListener('click', function (event) {
-            event.preventDefault;
-          });
-        }
-      });
+      // document.addEventListener('DOMContentLoaded', function () {
+      //   for (let i = 1; i <= href; i++) {
+      //     const button = document.querySelector('button[i]');
+      //     button.addEventListener('click', function (event) {
+      //       event.preventDefault;
+      //     });
+      //   }
+      // });
 
       // const btn = document.querySelector('.btn');
       // btn.addEventListener('click', clickHandler);
@@ -32,6 +46,14 @@
       // if (true) {
       //   window.location.href = '01.html';
       // }
+      function loadSection(number) {
+        resetSection();
+        let section = $(data[number].contents);
+        $('body').append(section);
+      }
+      function resetSection() {
+        $('section').empty();
+      }
     </script>
   </body>
 </html>
