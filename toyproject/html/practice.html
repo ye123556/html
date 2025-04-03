@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+  </head>
+  <body>
+    <header>
+      <h1>발음 교정 테스트</h1>
+      <p><a href="01.html">1</a></p>
+      <p><a href="02.html">2</a></p>
+      <p><a href="03.html">3</a></p>
+      <p><a href="04.html">4</a></p>
+      <p><a href="05.html">5</a></p>
+    </header>
+    <script>
+      let href = ['01.html', '02.html', '03.html', '04.html', '05.html'];
+
+      document.addEventListener('DOMContentLoaded', function () {
+        for (let i = 1; i <= href; i++) {
+          const button = document.querySelector('button[i]');
+          button.addEventListener('click', function (event) {
+            event.preventDefault;
+          });
+        }
+      });
+
+      // const btn = document.querySelector('.btn');
+      // btn.addEventListener('click', clickHandler);
+      // function clickHandler() {}
+      // if (true) {
+      //   window.location.href = '01.html';
+      // }
+    </script>
+  </body>
+</html>
