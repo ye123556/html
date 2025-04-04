@@ -4,9 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&family=Hi+Melody&display=swap"
+      rel="stylesheet" />
     <style>
       header > p {
         display: inline-block;
+      }
+      html {
+        background-color: rgb(255, 255, 255);
+      }
+
+      h1 {
+        font-family: 'Dongle';
+        font-size: 40px;
+      }
+
+      h2 {
+        color: rgb(201, 2, 201);
+      }
+      body {
+        text-align: center;
+      }
+      p {
+        font-family: 'Dongle';
+        font-size: 30px;
+      }
+      .color {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgb(224, 176, 236);
       }
     </style>
     <script
@@ -15,20 +43,33 @@
       crossorigin="anonymous"></script>
     <script src="../js/data.js"></script>
   </head>
-  <body>
+  <body class="html">
     <header>
       <h1>발음 교정 테스트</h1>
       <!-- <p onclick="loadSection(this.textContent-1); return false;">
         <a href="">1</a>
       </p> 새로고침 방지-->
-      <p onclick="loadSection(this.textContent-1)"><a href="#">1</a></p>
-      <p onclick="loadSection(this.textContent-1)"><a href="#">2</a></p>
-      <p onclick="loadSection(this.textContent-1)"><a href="#">3</a></p>
-      <p onclick="loadSection(this.textContent-1)"><a href="#">4</a></p>
-      <p onclick="loadSection(this.textContent-1)"><a href="#">5</a></p>
+      <p class="color" onclick="loadSection(this.textContent-1)">
+        <a href="#">1</a>
+      </p>
+      <p class="color" onclick="loadSection(this.textContent-1)">
+        <a href="#">2</a>
+      </p>
+      <p class="color" onclick="loadSection(this.textContent-1)">
+        <a href="#">3</a>
+      </p>
+      <p class="color" onclick="loadSection(this.textContent-1)">
+        <a href="#">4</a>
+      </p>
+      <p class="color" onclick="loadSection(this.textContent-1)">
+        <a href="#">5</a>
+      </p>
     </header>
     <section></section>
     <script>
+      document.getElementById('../js/data.js-section').style.border =
+        '1px solid black';
+      // alert('발음 연습 시작!! (ง •̀_•́)ง');
       // let href = ['01.html', '02.html', '03.html', '04.html', '05.html'];
 
       // document.addEventListener('DOMContentLoaded', function () {
