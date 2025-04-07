@@ -11,21 +11,50 @@
       header > p {
         display: inline-block;
       }
-      html {
-        background-color: rgb(255, 255, 255);
+      body {
+        background: url('img/orange.jpg') left no-repeat fixed;
+        background-size: cover;
+        text-align: center;
+      }
+      /* #ok {background-size: contain;} */
+
+      header {
+        background: white;
+        opacity: 1;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        width: auto;
+        height: 160px;
+        margin: 80px 200px 0px;
+        box-shadow: 0px 0px 5px rgb(185, 179, 179);
+      }
+
+      #clock1 {
+        background: white;
+        opacity: 1;
+        width: auto;
+        height: 160px;
+
+        margin: 0px 200px;
+
+        box-shadow: 0px 0px 5px rgb(185, 179, 179);
+
+        text-align: center;
+        line-height: 40px;
       }
 
       h1 {
         font-family: 'Dongle';
         font-size: 40px;
+        width: 100%;
+        height: 20px;
+        /* line-height: 100px; */
       }
 
       h2 {
-        color: rgb(201, 2, 201);
+        color: rgb(255, 153, 0);
       }
-      body {
-        text-align: center;
-      }
+
       p {
         font-family: 'Dongle';
         font-size: 30px;
@@ -33,22 +62,76 @@
       .color {
         width: 40px;
         height: 40px;
-        border-radius: 50%;
-        background-color: rgb(224, 176, 236);
+        border-radius: 55%;
+        color: #5a5459;
+        border: 0.5px solid #ccc0ca;
+        box-shadow: 0px -3px 3px #ffffff, 0px 3px 3px #cccccc;
+        background-color: rgb(233, 202, 117);
       }
+      /* div { */
+      /* position: absolute; */
+      /* right: 100px; */
+      /* top: 300px; */
+      /* float: right;
+        margin-right: 50px; */
+      /* } */
+      span {
+        font-size: 40px;
+        width: -100px;
+        line-height: 0px;
+        bottom: 100px;
+        font-family: 'font-weight:700';
+        /* line-height: 50px; */
+      }
+
+      #millisecond {
+        font-size: 30px;
+      }
+
+      #start-btn,
+      #stop-btn,
+      #reset-btn {
+        top: 50px;
+      }
+
+      button {
+        padding: 5px 10px 5px 10px;
+        min-width: 50px;
+        height: auto;
+        box-sizing: border-box;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #5a5459;
+        box-shadow: 0px -3px 3px #ffffff, 0px 3px 3px #cccccc;
+        background-color: rgb(233, 202, 117);
+      }
+
+      /* @media screen and (min-width: 768px) and (max-width: 1024px) {
+        body {
+          background: white;
+          opacity: 0.8;
+          border-radius: 30px;
+          width: 800px;
+          height: 700px;
+          margin: auto;
+        }
+      } */
     </style>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
-    <script src="../js/data.js"></script>
+    <script async src="../js/data.js"></script>
+    <script async src="../js/timer.js"></script>
   </head>
-  <body class="html">
+  <body>
+    <!-- <section> -->
     <header>
       <h1>발음 교정 테스트</h1>
       <!-- <p onclick="loadSection(this.textContent-1); return false;">
-        <a href="">1</a>
-      </p> 새로고침 방지-->
+          <a href="">1</a>
+        </p> 새로고침 방지-->
       <p class="color" onclick="loadSection(this.textContent-1)">
         <a href="#">1</a>
       </p>
@@ -65,7 +148,21 @@
         <a href="#">5</a>
       </p>
     </header>
+    <p id="clock1">
+      <span id="minute">00</span>:<span id="second">00</span>:<span
+        id="millisecond"
+        >00</span
+      >
+      <br />
+
+      <button id="start-btn">start</button>
+      <button id="stop-btn">stop</button>
+      <button id="reset-btn">reset</button>
+    </p>
+    <!--:<span id="millisecond">0</span>-->
+
     <section></section>
+    <!-- </section> -->
     <script>
       document.getElementById('../js/data.js-section').style.border =
         '1px solid black';
