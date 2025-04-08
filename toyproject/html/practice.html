@@ -18,34 +18,36 @@
       }
       /* #ok {background-size: contain;} */
 
-      header {
+      div {
         background: white;
-        opacity: 1;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
+        opacity: 0.8;
+        /* border-top-left-radius: 30px;
+        border-top-right-radius: 30px; */
+        border-radius: 30px;
         width: auto;
-        height: 160px;
-        margin: 80px 200px 0px;
+        height: 850px;
+        margin: 80px 300px 50px;
         box-shadow: 0px 0px 5px rgb(185, 179, 179);
+        position: relative;
       }
 
       #clock1 {
+        /* text-align: center;
         background: white;
         opacity: 1;
         width: auto;
-        height: 160px;
+        height: 160px; */
 
         margin: 0px 200px;
-
-        box-shadow: 0px 0px 5px rgb(185, 179, 179);
-
-        text-align: center;
+        /* box-shadow: 0px 0px 5px rgb(185, 179, 179); */
         line-height: 40px;
+        text-align: center;
+        line-height: 80px;
       }
 
       h1 {
         font-family: 'Dongle';
-        font-size: 40px;
+        font-size: 50px;
         width: 100%;
         height: 20px;
         /* line-height: 100px; */
@@ -68,6 +70,14 @@
         box-shadow: 0px -3px 3px #ffffff, 0px 3px 3px #cccccc;
         background-color: rgb(233, 202, 117);
       }
+
+      /* #a {
+        text-align: center;
+        background: white;
+        opacity: 1;
+        width: auto;
+        height: 160px;
+      } */
       /* div { */
       /* position: absolute; */
       /* right: 100px; */
@@ -117,6 +127,16 @@
           margin: auto;
         }
       } */
+      /* section#a {
+        text-align: center;
+        background: white;
+        opacity: 1;
+        width: auto;
+        height: 200px;
+      } */
+      .loadSection {
+        border: 1px solid black;
+      }
     </style>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -126,46 +146,45 @@
     <script async src="../js/timer.js"></script>
   </head>
   <body>
-    <!-- <section> -->
-    <header>
-      <h1>발음 교정 테스트</h1>
-      <!-- <p onclick="loadSection(this.textContent-1); return false;">
+    <div>
+      <!-- <section> -->
+      <header>
+        <h1>발음 교정 테스트</h1>
+        <!-- <p onclick="loadSection(this.textContent-1); return false;">
           <a href="">1</a>
         </p> 새로고침 방지-->
-      <p class="color" onclick="loadSection(this.textContent-1)">
-        <a href="#">1</a>
+        <p class="color" onclick="loadSection(this.textContent-1)">
+          <a href="#">1</a>
+        </p>
+        <p class="color" onclick="loadSection(this.textContent-1)">
+          <a href="#">2</a>
+        </p>
+        <p class="color" onclick="loadSection(this.textContent-1)">
+          <a href="#">3</a>
+        </p>
+        <p class="color" onclick="loadSection(this.textContent-1)">
+          <a href="#">4</a>
+        </p>
+        <p class="color" onclick="loadSection(this.textContent-1)">
+          <a href="#">5</a>
+        </p><hr style="border: 0.2px dotted rgb(201, 196, 196);">
+      </header>
+      <p id="clock1">
+        <span id="minute">00</span>:<span id="second">00</span>:<span
+          id="millisecond"
+          >00</span
+        >
+        <br />
+        
+        <button id="start-btn">start</button>
+        <button id="stop-btn">stop</button>
+        <button id="reset-btn">reset</button><hr style="border: 0.2px dotted rgb(201, 196, 196);">
       </p>
-      <p class="color" onclick="loadSection(this.textContent-1)">
-        <a href="#">2</a>
-      </p>
-      <p class="color" onclick="loadSection(this.textContent-1)">
-        <a href="#">3</a>
-      </p>
-      <p class="color" onclick="loadSection(this.textContent-1)">
-        <a href="#">4</a>
-      </p>
-      <p class="color" onclick="loadSection(this.textContent-1)">
-        <a href="#">5</a>
-      </p>
-    </header>
-    <p id="clock1">
-      <span id="minute">00</span>:<span id="second">00</span>:<span
-        id="millisecond"
-        >00</span
-      >
-      <br />
-
-      <button id="start-btn">start</button>
-      <button id="stop-btn">stop</button>
-      <button id="reset-btn">reset</button>
-    </p>
-    <!--:<span id="millisecond">0</span>-->
-
+      <!--:<span id="millisecond">0</span>-->
+    </div>
     <section></section>
     <!-- </section> -->
     <script>
-      document.getElementById('../js/data.js-section').style.border =
-        '1px solid black';
       // alert('발음 연습 시작!! (ง •̀_•́)ง');
       // let href = ['01.html', '02.html', '03.html', '04.html', '05.html'];
 
@@ -192,6 +211,8 @@
       function resetSection() {
         $('section').empty();
       }
+
+      document.querySelector('#a').style.color = 'red';
     </script>
   </body>
 </html>
