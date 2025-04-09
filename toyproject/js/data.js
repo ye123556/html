@@ -1,9 +1,11 @@
+// const style1 = document.querySelector('data');
 const data = [
   {
     id: 1,
-    contents: `<section id = "a">
+    contents: `<section>
       <h2># 01</h2>
       <h5>난이도 : ★</h5>
+      <hr />
       <p>
         도토리가 문을 도로록,<br />드르륵,두루룩 열었는가?<br />드로록, 두루륵,
         두르룩 열었는가.
@@ -17,9 +19,10 @@ const data = [
   },
   {
     id: 2,
-    contents: ` <section id = "a">
+    contents: ` <section>
       <h2># 02</h2>
       <h5>난이도: ★★</h5>
+      <hr/>
       <p>한양양장점 옆에 한영양장점<br />한영양장점 옆에 한양양장점</p>
       <p>
         내가 그린 구름그림은<br />새털구름 그린 구름그림이고,<br />네가 그린
@@ -29,9 +32,10 @@ const data = [
   },
   {
     id: 3,
-    contents: `<section id = "a">
+    contents: `<section>
       <h2># 03</h2>
       <h5>난이도: ★★★</h5>
+      <hr/>
       <p>
         베를린 필 비올라 단원인 울리히 크뢰룰러는<br />베를린 필 하모닉 새
         지휘자 키릴 페트렌토가 <br />
@@ -46,9 +50,10 @@ const data = [
   },
   {
     id: 4,
-    contents: `<section id = "a">
+    contents: `<section>
       <h2># 04</h2>
       <h5>난이도: ★★★★</h5>
+      <hr />
       <p>
         초코칩나라에 살던 안 촉촉한 초코칩이<br />촉촉한 초코칩 나라의 촉촉한
         초코칩을 보고<br />촉촉한 초코칩이 되고 싶어서 촉촉한 초코칩 나라에
@@ -62,9 +67,10 @@ const data = [
   },
   {
     id: 5,
-    contents: `<section id = "a">
+    contents: `<section>
       <h2># 05</h2>
       <h5>난이도: ★★★★★</h5>
+      <hr/>
       <p>
         스위스에서 산새들이 속삭이는 산길 숲속에서 숫사슴을<br />샅샅이 수색해
         식사하고 산 속 샘물로 세수하며 사는<br />삼십 삼 살 샴쌍둥이 미세스
@@ -79,3 +85,4 @@ const data = [
     </section>`,
   },
 ];
+// section.style.background = 'white';

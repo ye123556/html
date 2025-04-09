@@ -25,7 +25,7 @@
         border-top-right-radius: 30px; */
         border-radius: 30px;
         width: auto;
-        height: 850px;
+        height: 370px;
         margin: 80px 300px 50px;
         box-shadow: 0px 0px 5px rgb(185, 179, 179);
         position: relative;
@@ -70,6 +70,8 @@
         box-shadow: 0px -3px 3px #ffffff, 0px 3px 3px #cccccc;
         background-color: rgb(233, 202, 117);
       }
+      
+      
 
       /* #a {
         text-align: center;
@@ -127,15 +129,20 @@
           margin: auto;
         }
       } */
-      /* section#a {
+      section { /*박스가 왜 계속 생기는 가....*/
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 1048px;
+        height: 600px;
+        margin: 80px 300px 50px;
+        /* box-shadow: 0px 0px 5px rgb(212, 208, 208); */
+        position: relative;
         text-align: center;
-        background: white;
+        background-color: white;
         opacity: 1;
-        width: auto;
-        height: 200px;
-      } */
-      .loadSection {
-        border: 1px solid black;
+        position: absolute;
+        top: 341px;
+        border: 0.3px dotted #ccc0ca;
       }
     </style>
     <script
@@ -182,7 +189,6 @@
       </p>
       <!--:<span id="millisecond">0</span>-->
     </div>
-    <section></section>
     <!-- </section> -->
     <script>
       // alert('발음 연습 시작!! (ง •̀_•́)ง');
@@ -212,7 +218,22 @@
         $('section').empty();
       }
 
-      document.querySelector('#a').style.color = 'red';
+      
+      // function loadcolor(number) {
+      //   section.style.background = "white";
+      // }
+      // if(onclick) {
+      //   "loadSection(this.textContent-1)".style.background = "white";
+      //   "loadSection(this.textContent-1)".style.opacity = "1";
+      //   "loadSection(this.textContent-1)".style.width = "auto";
+      //   "loadSection(this.textContent-1)".style.height = "200px";
+      // }
+      // let color = document.querySelector('#color');
+      // color = function() {
+      //   
+      // }
+      
+      
     </script>
   </body>
 </html>
